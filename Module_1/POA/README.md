@@ -78,7 +78,7 @@ Public address of the key:   0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 * #### mining node #3
 ```bash
-geth account new --datadir node2
+geth account new --datadir node3
 ```
 Write down ```public address ``` and dont forget the password
 ```
