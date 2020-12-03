@@ -1,5 +1,9 @@
 # Part 1. Solidity development
 
+## Links to the code examples:
+
+1. Web3js + ReactJs https://codesandbox.io/s/samplecontract-oyi11?file=/src/App.js
+
 ### 1. Value-types
 
 ```js
