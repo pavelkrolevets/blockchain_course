@@ -1,8 +1,7 @@
 # Part 1. Solidity development
 
-## Links to the code examples:
 
-1. Web3js + ReactJs https://codesandbox.io/s/samplecontract-oyi11?file=/src/App.js
+# 1. Solidity references
 
 ### 1. Value-types
 
@@ -307,9 +306,14 @@ contract Consumer {
 }
 ```
 
-### 4. Web3js
+# 2. Web3js
 
-Prepare
+## Links to the code examples:
+
+1. Web3js + ReactJs https://codesandbox.io/s/samplecontract-oyi11?file=/src/App.js
+
+
+To run locally, prepare:
 
 - install NodeJs https://nodejs.org/en/download/
 
@@ -320,6 +324,13 @@ npm init
 npm install web3@0.20.1
 npm install ethereumjs-tx@1.3.7
 ```
+
+Create `index.js` file 
+```bash
+touch index.js
+```
+
+Open `index.js` in a text editor or IDE (VSCode), copy/paste code below.
 
 Check balance and 
 ```js

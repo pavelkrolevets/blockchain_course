@@ -20,9 +20,13 @@
 
 ### 3. Module. Decentralized applications. Solidity in depth.
 
-Part  1
-
 * #### Important Solidity types and operators.
 * #### Web3js library
 * #### Front-end + decentralized backend
 * #### Practice: create ERC-721 non-fungible token (NFT); create node/react/web3js application
+
+### 4. Module. Blockchain interoperability.
+
+* #### Different blockchain platforms. Whats the difference?
+* #### Approaches to interoperability.
+* #### Practice: create ERC-20 fungible, create ERC-721 non-fungible token (NFT); create node/react/web3js application to use both types of contracts in a swap like Defi contract.
