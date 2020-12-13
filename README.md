@@ -30,3 +30,8 @@
 * #### Different blockchain platforms. Whats the difference?
 * #### Approaches to interoperability.
 * #### Practice: create ERC-20 fungible, create ERC-721 non-fungible token (NFT); create node/react/web3js application to use both types of contracts in a swap like Defi contract.
+
+### 5. Module. DeFi projects. Final coding exercises.
+
+* #### Different DeFi projects which have built the foundation for new era in automated finance.
+* #### Practice: create ERC-20 token SWAP, create simple voting contract; create simple escrow contract.
