@@ -33,5 +33,5 @@
 
 ### 5. Module. DeFi projects. Final coding exercises.
 
-* #### Different DeFi projects which have built the foundation for new era in automated finance.
+* #### Different DeFi projects which have built the foundation for the new era of automated finance.
 * #### Practice: create ERC-20 token SWAP, create simple voting contract; create simple escrow contract.
