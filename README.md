@@ -1,4 +1,4 @@
-# Introduction to blockchain programming (RANEPA FinTech)
+# Introduction to blockchain programming (RANEPA FinTech 2021)
 
 ### 1. Module. Introduction to blockchain and cryptography
 
@@ -9,7 +9,7 @@
 * #### Cryptographic primitives: hash, public key, singature
 * #### Practice: send transactions, run private chain
 
-### 2. Module. Deep dive to Crypto. Hash, public-key cryptography, digital signature. EVM and Smart-contracts
+### 2. Module. Deep dive to Crypto. Hash, public-key cryptography, digital signature. EVM and Smart-contracts. ERC20 token. 
 
 * #### Hash and its properties
 * #### Public-key cryptography
@@ -18,20 +18,26 @@
 * #### Smart-contracts
 * #### Practice: create ERC20 token
 
-### 3. Module. Decentralized applications. Solidity in depth.
+### 3. Module. Solidity in depth. 
 
-* #### Important Solidity types and operators.
+* #### Important Solidity concepts.
+* #### ERC721 and the history of NFT.
+* #### NFT digital art.
+* #### Practice: NFT token + digitilize art.
+
+### 4. Module. Decentralized applications.
+
 * #### Web3js library
 * #### Front-end + decentralized backend
-* #### Practice: create ERC-721 non-fungible token (NFT); create node/react/web3js application
+* #### Practice: create node/react/web3js decentrlized application
 
-### 4. Module. Blockchain interoperability.
+### 5. Module. Blockchain interoperability.
 
 * #### Different blockchain platforms. Whats the difference?
 * #### Approaches to interoperability.
 * #### Practice: create ERC-20 fungible, create ERC-721 non-fungible token (NFT); create node/react/web3js application to use both types of contracts in a swap like Defi contract.
 
-### 5. Module. DeFi projects. Final coding exercises.
+### 6. Module. DeFi projects. Final coding exercises.
 
 * #### Different DeFi projects which have built the foundation for the new era of automated finance.
 * #### Practice: create ERC-20 token SWAP, create simple voting contract; create simple escrow contract.
