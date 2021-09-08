@@ -53,8 +53,10 @@ brew install ethereum
 ## 1. Clone the repo
 
 ```bash
-git clone https://github.com/pavelkrolevets/blockchain_course.git && \
-cd blockchain_course/Module_1/POA/
+git clone https://github.com/pavelkrolevets/blockchain_course.git
+cd blockchain_course/Module_1
+mkdir POA
+cd POA
 ```
 
 ## 2. Create account addresses for the authoriry mining nodes
