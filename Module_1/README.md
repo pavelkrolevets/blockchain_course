@@ -233,17 +233,16 @@ geth --datadir node1 \
   --syncmode full \
   --port 30311  \
   --ws \
-  --wsaddr 0.0.0.0 \
-  --wsport 8546 \
-  --wsorigins "*" \
-  --rpc \
-  --rpcaddr 0.0.0.0 \
-  --rpcport 8545 \
-  --rpccorsdomain "*" \
-  --rpcapi shh,personal,db,eth,net,web3,txpool,miner,admin \
+  --ws.addr 0.0.0.0 \
+  --ws.port 8546 \
+  --ws.origins "*" \
+  --http \
+  --http.addr 0.0.0.0 \
+  --http.port 8545 \
+  --http.corsdomain "*" \
+  --http.api shh,personal,db,eth,net,web3,txpool,miner,admin \
   --bootnodes enode://[your_boot.key]@127.0.0.1:30301 \
   --networkid 777 \
-  --gasprice 0 \
   --unlock [node1_address] \
   --password node1/password.txt \
   --mine \
@@ -268,7 +267,6 @@ geth --datadir node2 \
   --rpcapi shh,personal,db,eth,net,web3,txpool,miner,admin \
   --bootnodes enode://[your_boot.key]@127.0.0.1:30301 \
   --networkid 777 \
-  --gasprice 0 \
   --unlock [node2_address] \
   --password node2/password.txt \
   --mine \
@@ -293,7 +291,6 @@ geth --datadir node3 \
   --rpcapi shh,personal,db,eth,net,web3,txpool,miner,admin \
   --bootnodes enode://[your_boot.key]@127.0.0.1:30301 \
   --networkid 777 \
-  --gasprice 0 \
   --unlock [node3_address] \
   --password node3/password.txt \
   --mine \
