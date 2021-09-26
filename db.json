@@ -1,0 +1,23 @@
+[
+    {
+      "id": 0,
+      "description": "FINTECH 2021 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://drive.google.com/file/d/0Bz448ORkyS2eUFd6Q2d1Q0ZaNWM/view?usp=sharing&resourcekey=0-ULltqXRPwiLT_A8ObtZFAA",
+      "name": "FINTECH 2021 NFT 0"
+    },
+    {
+      "id": 1,
+      "description": "FINTECH 2021 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://drive.google.com/file/d/0Bz448ORkyS2eSFc1ZUh3bUpubWs/view?usp=sharing&resourcekey=0-ABtvc0gJBxLDTKPgZWW1Yg",
+      "name": "FINTECH 2021 NFT 1"
+    },
+    {
+      "id": 2,
+      "description": "FINTECH 2021 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://twemoji.maxcdn.com/svg/1f40e.svg",
+      "name": "FINTECH 2021 NFT 2"
+    }
+  ]
