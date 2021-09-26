@@ -30,8 +30,53 @@ https://eips.ethereum.org/EIPS/eip-721
 
 https://docs.openzeppelin.com/contracts/4.x/erc721
 
+#### 1. Upload assets to IPFS storage and create an API
+
+- go to https://nft.storage/: register and login
+- upload files at https://nft.storage/files/
+- create an API key at https://nft.storage/manage/
 
 
+#### 2. Create easy avaliable `json` metadata at https://my-json-server.typicode.com
+
+- go to github.com and create a new repo
+- in this repo create a file `db.json`
+- check avaliability at http://my-json-server.typicode.com/[your_name]/[repo]/tokens/
+
+Sample [db.json]
+
+```json
+{
+    "tokens": [
+    {
+      "id": 0,
+      "description": "FINTECH 2021 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://drive.google.com/file/d/0Bz448ORkyS2eUFd6Q2d1Q0ZaNWM/view?usp=sharing&resourcekey=0-ULltqXRPwiLT_A8ObtZFAA",
+      "name": "FINTECH 2021 NFT 0"
+    },
+    {
+      "id": 1,
+      "description": "FINTECH 2021 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://bafkreif3x4yn6ruv5uyu3y4heowhf55abidmhe6hz3ipnx4sikgo7fy6yy.ipfs.dweb.link/",
+      "name": "FINTECH 2021 NFT 1"
+    },
+    {
+      "id": 2,
+      "description": "FINTECH 2021 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://twemoji.maxcdn.com/svg/1f40e.svg",
+      "name": "FINTECH 2021 NFT 2"
+    }
+  ]
+}
+```
+
+
+
+
+#### 3. Deploy an NFT smart contract 
 
 ```js
 // SPDX-License-Identifier: MIT
@@ -137,3 +182,18 @@ contract ERC721PresetMinterPauserAutoId is Context, AccessControl, ERC721Burnabl
     }
 }
 ```
+#### 4. Mint to an adress to preserve ownership using `mint` function at the contract
+
+
+
+#### 5. Validate NFT at `https://rinkeby-api.opensea.io/asset/[nft contract address]/[token id]/validate`
+
+My example https://rinkeby-api.opensea.io/asset/0x53f209A2B1C995c135401cFD1C6499Ad7704f76D/0/validate
+
+#### 6. Check you NFT at OpenSea.io https://rinkeby.opensea.io/assets/[nft contract address]/[token id]
+
+My example https://testnets.opensea.io/assets/0x53f209A2B1C995c135401cFD1C6499Ad7704f76D/0
+
+More info here:
+
+https://forum.openzeppelin.com/t/create-an-nft-and-deploy-to-a-public-testnet-using-remix/6358
