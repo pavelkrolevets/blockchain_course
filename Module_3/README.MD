@@ -10,7 +10,7 @@ Open Remix IDE && create `<your_token_name.sol>`
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract YOUR_TOKEN is ERC20 {
     constructor(uint256 initialSupply) ERC20("NAME", "TICKER") {
