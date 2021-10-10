@@ -1,30 +1,129 @@
 # Solidity development. Web3js + React.
 
-# 1. Web3js
+# HOMEWORK Create a React front-end to communicate to blockchain smart contract
 
 ## Links to the code examples:
 
-1. Web3js + ReactJs https://codesandbox.io/s/samplecontract-oyi11?file=/src/App.js
+Sandbox https://codesandbox.io/s/samplecontract-oyi11?file=/src/App.js
+
+Github https://github.com/pavelkrolevets/blockchain_course/blob/main/Module_4/front-end/src/App.js
+
+#### Prerequisites:
+- installed Node >= 14.0.0 and npm >= 5.6 
+https://nodejs.org/en/
+
+Ubuntu Node+NPM installation https://linuxize.com/post/how-to-install-node-js-on-ubuntu-20-04/
+
+MAC OSX Node+NPM installation https://nodejs.org/en/download/
+
+1.  Create React project
+```sh
+npx create-react-app front-end 
+```
+```sh
+cd front-end
+```
+2. Add `web3js` library
+```sh
+npm install && npm install web3@1.3.0
+```
+2. Open src/App.js in any Editor
+```sh
+vim src/App.js
+```
+3. Add desirable fucntions to the body of `function App()`
+
+```js
+import React, { useState } from "react";
+
+export default function App() {
+  const [show_balance, set_balance] = useState(0);
+  const [transaction_message, set_transaction_message] = useState(
+    "Simple transaction message"
+  );
+  const [raw_transaction_message, set_raw_transaction_message] = useState(
+    "Signed transaction message"
+  );
+
+  function getBalance() {
+    var Web3 = require("web3");
+    var web3 = new Web3(
+      new Web3.providers.HttpProvider("http://localhost:8545")
+    );
+    console.log("Checking  balance");
+    web3.eth
+      .getBalance("0x4faF226eA0437A14ae882Fc05Df2439029312E3E")
+      .then((balance) => {
+        console.log(
+          "Account 0x4faF226eA0437A14ae882Fc05Df2439029312E3E balance",
+          balance
+        );
+        set_balance(Web3.utils.fromWei(balance, "ether"));
+      });
+  }
+
+  function sendTransaction() {
+    var Web3 = require("web3");
+    var web3 = new Web3(
+      new Web3.providers.HttpProvider("http://localhost:8545")
+    );
+
+    console.log("Sending  transaction");
+
+    web3.eth
+      .sendTransaction({
+        from: "0x69f54a92ecCD20dAA471cE488B3fD89e1503CA79",
+        to: "0x4faF226eA0437A14ae882Fc05Df2439029312E3E",
+        value: "1000000000000000000"
+      })
+      .on("transactionHash", function (hash) {
+        console.log("Hash", hash);
+        set_transaction_message("Transaction hash " + hash);
+      })
+      .on("receipt", function (receipt) {
+        console.log("Receipt ", receipt);
+      })
+      .on("confirmation", function (confirmationNumber, receipt) {
+        console.log("Confirmation ", confirmationNumber);
+        set_transaction_message("Confirmation " + confirmationNumber);
+        if (parseInt(confirmationNumber, 10)===6) {
+          set_transaction_message("Sucess! " + receipt.blockNumber);
+        }
+      })
+      .on("error", console.error);
+  }
 
 
-To run locally, prepare:
+  return (
+    <div className="App">
+      <div>
+        <h4>Hello world Web3js</h4>
+      </div>
 
-- install NodeJs https://nodejs.org/en/download/
+      <div>
+        <button onClick={getBalance}> Get Balance</button>
+        <h4>{show_balance}</h4>
+      </div>
 
-  
-```bash
-mkdir web3_example && cd web3_example
-npm init
-npm install web3@0.20.1
-npm install ethereumjs-tx@1.3.7
+      <div>
+        <button onClick={sendTransaction}> Send simple transaction</button>
+        <h4>{transaction_message}</h4>
+      </div>
+    </div>
+  );
+}
 ```
 
-Create `index.js` file 
-```bash
-touch index.js
+4. Run the app 
+```sh
+npm run start
 ```
 
-Open `index.js` in a text editor or IDE (VSCode), copy/paste code below.
+5. Open in the Browser http://localhost:3000/
+
+6. To stop the app runnin `CTRL+C`
+
+# Code smaples
 
 Check balance and 
 ```js
@@ -63,6 +162,12 @@ web3.eth.sendTransaction({
 ```
 
 Send raw transaction
+
+##### Here we need an additional library
+
+```bash
+npm install ethereumjs-tx@1.3.7
+```
 
 ```js
 var Web3 = require("web3");
@@ -195,7 +300,7 @@ var privateKey =
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 web3.eth.defaultAccount = web3.eth.accounts[0];
-web3.personal.unlockAccount(web3.eth.defaultAccount, "Gfdtk81,");
+web3.personal.unlockAccount(web3.eth.defaultAccount, "Password");
 
 contract = web3.eth.contract(abi).at(address);
 
@@ -231,12 +336,3 @@ web3.eth.getTransactionCount(account, function (err, nonce) {
   });
 });
 ```
-
-### HOMEWORK Create a React front-end to communicate to blockchain smart contract
-
-1.  Create React project
-```sh
-npx create-react-app .
-```
-2. Deploy smart contract
-3. Create a button to store value in the contract
