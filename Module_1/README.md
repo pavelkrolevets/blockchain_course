@@ -194,7 +194,11 @@ What would you like to do? (default = stats)
 ```
 
 Now we have genesis block configured in `ilovefintech.json`
+According to new Ethereum rules you need to rename `ilovefintech.json` to `genesis.json`
 
+```sh
+mv ilovefintech.json genesis.json
+```
 ## 3. Configure `bootnode` which is needed for nodes to start communicating between each other:
 
 ```bash
@@ -220,7 +224,7 @@ Get `bootnode` address from generated key. We will use it when we run mining nod
 * <b>In new terminal window</b> run Node #1
 
 ```bash
-geth init ilovefintech.json --datadir node1/
+geth init --datadir node1 genesis.json
 ```
 Create password file for Node #1
 ```bash
@@ -264,7 +268,8 @@ geth --datadir node2 \
   --identity node2 \
   --syncmode full \
   --port 30312  \
-  --rpcapi shh,personal,db,eth,net,web3,txpool,miner,admin \
+  --http.api shh,personal,db,eth,net,web3,txpool,miner,admin \
+  --authrpc.port 8552 \
   --bootnodes enode://[your_boot.key]@127.0.0.1:30301 \
   --networkid 777 \
   --unlock [node2_address] \
@@ -288,7 +293,8 @@ geth --datadir node3 \
   --identity node3 \
   --syncmode full \
   --port 30313  \
-  --rpcapi shh,personal,db,eth,net,web3,txpool,miner,admin \
+  --http.api shh,personal,db,eth,net,web3,txpool,miner,admin \
+  --authrpc.port 8553 \
   --bootnodes enode://[your_boot.key]@127.0.0.1:30301 \
   --networkid 777 \
   --unlock [node3_address] \
