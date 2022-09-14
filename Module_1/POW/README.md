@@ -23,7 +23,7 @@ Public address of the key:   0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 ```bash
-geth init fintech_2021.json --datadir pow_node/
+geth init --datadir pow_node genesisi.json
 ```
 Create password file for Node #1
 ```bash
@@ -34,7 +34,7 @@ echo 'your_password' > pow_node/password.txt
 geth --datadir pow_node \
   --identity pow_node \
   --syncmode full \
-  --port 30303  \
+  --port 30301  \
   --ws \
   --ws.addr 0.0.0.0 \
   --ws.port 8546 \
@@ -44,9 +44,9 @@ geth --datadir pow_node \
   --http.port 8545 \
   --http.corsdomain "*" \
   --http.api personal,eth,net,web3,txpool,miner,admin \
-  --bootnodes enode://b95014943b078e231382b021c012dde556459ab181bd7d270e4261c0c4cf6dac5fa909a9c7959bf42f967fc37c08cc25442db657a286d7ed0b7f8305cccdf5a6@140.82.11.254:30303 \
+  --bootnodes enode://ee44ae5a85159956a2b0d10631ef624c435a47a1fb028e6dc46cd86001697da79ff645c9eeafbf00cf082976b2243c405bdce374cc9364de727f2101d0631d7a@130.193.36.137:30301 \
   --networkid 50074 \
-  --unlock 0x511de36d785eE346d8466bD37BA86fc4369e22B4 \
+  --unlock 0xcaADF24be807C2DCAd3648c8D3E0068823aADB3D \
   --password pow_node/password.txt \
   --mine \
   --miner.threads=1 \
