@@ -89,7 +89,7 @@ Install `remixd` tool (install node if you dont have npm)
 https://github.com/ethereum/remixd
 
 ```bash
-npm install -g remixd
+npm install -g @remix-project/remixd
 ```
 
 Run `remixd` to open OpenZeppelin smart-contract forlders in Remix
@@ -102,14 +102,16 @@ Open `remixd` plugin in Remix IDE && create `<your_token_name.sol>` in `/token/E
 
 ```js
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.0 <0.8.0;
+pragma solidity >=0.7.0 <0.9.0;
 
 import "./ERC20.sol";
 
 contract Fintech2020Token is ERC20 {
     constructor(uint256 initialSupply) public ERC20("Fintech2020Token", "FIN2020") {
         _mint(msg.sender, initialSupply);
-        _setupDecimals(2);
+    }
+    function decimals() public view virtual override returns (uint8) {
+    return 2;
     }
 }
 ```
