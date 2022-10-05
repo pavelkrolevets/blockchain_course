@@ -50,24 +50,24 @@ Sample [db.json]
     "tokens": [
     {
       "id": 0,
-      "description": "FINTECH 2021 NFT",
+      "description": "FINTECH 2022 NFT",
       "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
       "image": "https://drive.google.com/file/d/0Bz448ORkyS2eUFd6Q2d1Q0ZaNWM/view?usp=sharing&resourcekey=0-ULltqXRPwiLT_A8ObtZFAA",
-      "name": "FINTECH 2021 NFT 0"
+      "name": "FINTECH 2022 NFT 0"
     },
     {
       "id": 1,
-      "description": "FINTECH 2021 NFT",
-      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
-      "image": "https://bafkreif3x4yn6ruv5uyu3y4heowhf55abidmhe6hz3ipnx4sikgo7fy6yy.ipfs.dweb.link/",
-      "name": "FINTECH 2021 NFT 1"
+      "description": "FINTECH 2022 NFT",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_3",
+      "image": "https://bafkreih5a7q3byh76our22se7vhhpkp67vabpzdukdhs633zkvka7klxsi.ipfs.dweb.link/",
+      "name": "FINTECH 2022 NFT 1"
     },
     {
       "id": 2,
-      "description": "FINTECH 2021 NFT",
+      "description": "FINTECH 2022 NFT",
       "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
       "image": "https://twemoji.maxcdn.com/svg/1f40e.svg",
-      "name": "FINTECH 2021 NFT 2"
+      "name": "FINTECH 2022 NFT 2"
     }
   ]
 }
