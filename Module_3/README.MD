@@ -52,14 +52,14 @@ Sample [db.json]
       "id": 0,
       "description": "FINTECH 2022 NFT",
       "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
-      "image": "https://drive.google.com/file/d/0Bz448ORkyS2eUFd6Q2d1Q0ZaNWM/view?usp=sharing&resourcekey=0-ULltqXRPwiLT_A8ObtZFAA",
+      "image": "https://bafkreih5a7q3byh76our22se7vhhpkp67vabpzdukdhs633zkvka7klxsi.ipfs.dweb.link/",
       "name": "FINTECH 2022 NFT 0"
     },
     {
       "id": 1,
       "description": "FINTECH 2022 NFT",
-      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_3",
-      "image": "https://bafkreih5a7q3byh76our22se7vhhpkp67vabpzdukdhs633zkvka7klxsi.ipfs.dweb.link/",
+      "external_url": "https://github.com/pavelkrolevets/blockchain_course/tree/main/Module_2",
+      "image": "https://drive.google.com/file/d/0Bz448ORkyS2eSFc1ZUh3bUpubWs/view?usp=sharing&resourcekey=0-ABtvc0gJBxLDTKPgZWW1Yg",
       "name": "FINTECH 2022 NFT 1"
     },
     {
