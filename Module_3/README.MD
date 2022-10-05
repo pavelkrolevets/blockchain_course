@@ -190,11 +190,11 @@ contract ERC721PresetMinterPauserAutoId is Context, AccessControl, ERC721Burnabl
 
 #### 5. Validate NFT at `https://rinkeby-api.opensea.io/asset/[nft contract address]/[token id]/validate`
 
-My example https://rinkeby-api.opensea.io/asset/0x53f209A2B1C995c135401cFD1C6499Ad7704f76D/0/validate
+My example https://rinkeby-api.opensea.io/asset/rinkeby/0x53f209A2B1C995c135401cFD1C6499Ad7704f76D/0/validate
 
 #### 6. Check you NFT at OpenSea.io https://rinkeby.opensea.io/assets/[nft contract address]/[token id]
 
-My example https://testnets.opensea.io/assets/0x53f209A2B1C995c135401cFD1C6499Ad7704f76D/0
+My example https://testnets.opensea.io/assets/rinkeby/0x53f209A2B1C995c135401cFD1C6499Ad7704f76D/0
 
 More info here:
 
