@@ -76,7 +76,9 @@ Sample [db.json]
 
 
 
-#### 3. Deploy an NFT smart contract 
+#### 3. Deploy an NFT smart contract ("ERC721PresetMinterPauserAutoId")
+
+* baseURI: https://my-json-server.typicode.com/pavelkrolevets/blockchain_course/tokens/
 
 ```js
 // SPDX-License-Identifier: MIT
