@@ -201,7 +201,7 @@ More info here:
 https://forum.openzeppelin.com/t/create-an-nft-and-deploy-to-a-public-testnet-using-remix/6358
 
 
-## 7. Simple Escrow contract
+## 3. Simple Escrow contract
 
 ```js
 // SPDX-License-Identifier: MIT
