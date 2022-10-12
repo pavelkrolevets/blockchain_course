@@ -199,3 +199,48 @@ My example https://testnets.opensea.io/assets/goerli/0xf21B7dbCa4E8579Ed84d1BA9B
 More info here:
 
 https://forum.openzeppelin.com/t/create-an-nft-and-deploy-to-a-public-testnet-using-remix/6358
+
+
+## 7. Simple Escrow contract
+
+```js
+// SPDX-License-Identifier: MIT
+
+pragma solidity >=0.6.0 <0.8.0;
+
+contract Escrow {
+    address private seller; //receives money
+    address private buyer; // sends money
+    bool private confirmed = false;
+
+    event init(address buyer, address seller, uint amount); 
+
+    event released(address, address, uint); 
+
+    constructor(address seller_) payable {
+        require(msg.value != 0, "Cant initiate with zero value!");
+        buyer = msg.sender;
+        seller = seller_;
+        payable(address(this)).transfer(msg.value);
+        emit init(msg.sender, seller_, msg.value);
+    }
+
+    function cancel() public payable {
+        require(msg.sender == buyer, "Only buyer can cancel the transaction");
+        require(confirmed == false, "To cancel the transaction shpuld be unconfirmed by seller");
+        payable(msg.sender).transfer(address(this).balance);
+    }
+
+    function confirm() public {
+        require(msg.sender == seller, "Only seller can confirm transaction");
+        confirmed = true;
+    }
+
+    function release() public payable {
+        require(msg.sender == buyer, "Only buyer can release assets the transaction");
+        require(confirmed == true, "To realease the transaction should be confirmed by seller");
+        payable(address(seller)).transfer(address(this).balance);
+        emit released(seller, address(this), address(this).balance);
+    }
+}
+```
