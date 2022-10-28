@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 var Web3 = require("web3");
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
@@ -388,26 +390,26 @@ export default function App() {
     <div className="App">
       <h1>Send ERC20 tokens</h1>
       <div>
-        <button onClick={getBalance}>Check balance</button>
+        <Button onClick={getBalance} variant="contained">Check balance</Button>
         <h4>{show_balance}</h4>
       </div>
 
-      <input
+      <TextField id="outlined-basic" label="Outlined" variant="outlined"
         placeholder="enter ERC20 address"
         onChange={(e) => handleTokenAddressChange(e)}
-      ></input>
+      ></TextField>
       <div>
-        <button onClick={getName}>Get name</button>
+        <Button onClick={getName} variant="contained">Get name</Button>
         <h4>{show_name}</h4>
       </div>
 
       <div>
-        <button onClick={getSymbol}>Get symbol</button>
+        <Button onClick={getSymbol} variant="contained">Get symbol</Button>
         <h4>{show_symbol}</h4>
       </div>
 
       <div>
-        <button onClick={getSupply}>Get supply</button>
+        <Button onClick={getSupply} variant="contained">Get supply</Button>
         <h4>{show_supply}</h4>
       </div>
 
