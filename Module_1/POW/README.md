@@ -44,7 +44,7 @@ geth --datadir pow_node \
   --http.port 8545 \
   --http.corsdomain "*" \
   --http.api personal,eth,net,web3,txpool,miner,admin \
-  --bootnodes enode://ee44ae5a85159956a2b0d10631ef624c435a47a1fb028e6dc46cd86001697da79ff645c9eeafbf00cf082976b2243c405bdce374cc9364de727f2101d0631d7a@130.193.36.137:30301 \
+  --bootnodes enode://11bf7da782a0212d78bb608f7bc658c78cfdb74352fdb8d702c16fe618961edf5512a0b1cc7b186a22edb096becdf4c102976e1e17b9cc922b7c8932b24234bd@130.193.36.137:30301 \
   --networkid 50074 \
   --unlock 0xcaADF24be807C2DCAd3648c8D3E0068823aADB3D \
   --password pow_node/password.txt \
