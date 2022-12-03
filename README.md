@@ -1,4 +1,4 @@
-# Introduction to blockchain programming (RANEPA FinTech 2021)
+# Introduction to blockchain programming (RANEPA FinTech 2022)
 
 ### 1. Module. Introduction to blockchain and cryptography
 
